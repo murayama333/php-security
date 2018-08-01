@@ -4,8 +4,9 @@ session_start();
 $file = "message.json";
 $messages = json_decode(file_get_contents($file));
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = $_SESSION["name"];
     $message = $_POST["message"];
-    $messages[] = $message;
+    $messages[] = [$name, $message];
     file_put_contents($file, json_encode($messages), LOCK_EX);
 }
 ?>
@@ -14,15 +15,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <head>
     <meta charset="utf-8">
     <title>session sample</title>
-    <script type="text/javascript">
-      console.log(document.cookie["PHPSESSID"]);
-    </script>
   </head>
   <body>
     <h1>chat</h1>
     <ul>
       <?php for ($i = 0; $i < count($messages); $i++) { ?>
-        <li><?= $messages[$i]?></li>
+        <li><?= $messages[$i][0] ?> : <?= $messages[$i][1] ?></li>
       <?php }?>
     </ul>
     <form action="" method="post">

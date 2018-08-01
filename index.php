@@ -19,6 +19,5 @@ $_SESSION["count"] = $count;
   <body>
     <h1><?= $count; ?></h1>
     <a href="">count up</a>
-
   </body>
 </html>
