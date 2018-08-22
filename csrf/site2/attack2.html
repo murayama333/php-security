@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>demo</title>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      $(function(){
+        $("button").click(function(){
+          const url = "http://localhost:8000/chat.php";
+          const data = {
+            message: "Hello World";
+          }
+          $.post(url, data);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Site2 : localhost:18000</h1>
+    <button type="button">hello</button>
+  </body>
+</html>
