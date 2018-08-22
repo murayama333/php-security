@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>session sample</title>
   </head>
   <body>
-    <h1>Site1 : localhost:8000</h1>
+    <h1>Site1</h1>
     <h2>login</h2>
     <ul>
       <?php for ($i = 0; $i < count($messages); $i++) { ?>
