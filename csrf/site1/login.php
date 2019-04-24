@@ -16,11 +16,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <body>
     <h1>Site1</h1>
     <h2>login</h2>
-    <ul>
-      <?php for ($i = 0; $i < count($messages); $i++) { ?>
-        <li><?= $messages[$i]?></li>
-      <?php }?>
-    </ul>
     <form action="" method="post">
       <input type="text" name="name">
       <input type="password" name="pass">

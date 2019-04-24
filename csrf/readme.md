@@ -1,6 +1,6 @@
 # PHP CSRF
 
-CSRDの課題サンプルです。
+CSRFの課題サンプルです。
 
 ## 動かし方
 
@@ -36,7 +36,7 @@ http://localhost:8000/login.php
 別のブラウザからサイト2（以下のURL）にアクセスします。
 
 ```
-http://localhost:8000/attack.html
+http://localhost:18000/attack.html
 ```
 
 > 別サイトであるサイト2から、データを登録できてしまいます。
@@ -44,7 +44,7 @@ http://localhost:8000/attack.html
 同様にサイト2（以下のURL）にアクセスします。
 
 ```
-http://localhost:8000/attack2.html
+http://localhost:18000/attack2.html
 ```
 
 > attack2.htmlのようにユーザは攻撃したことに気づかないかもしれません。

@@ -14,12 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>session sample</title>
   </head>
   <body>
-    <h1>chat</h1>
-    <ul>
-      <?php for ($i = 0; $i < count($messages); $i++) { ?>
-        <li><?= $messages[$i]?></li>
-      <?php }?>
-    </ul>
+    <h1>login</h1>
     <form action="" method="post">
       <input type="text" name="name">
       <input type="password" name="pass">
